@@ -165,7 +165,7 @@ file to a `.mlmodel` file, and add the file to the iOS development cycle.
 Furthermore, the model is able to perform classification on the local
 device. There is no need for an internet connection for the application to work. Because of this, the ability to use EyeNet in remote areas is further justified, and that much easier.
 
-
+kaggle competitions download -c 'diabetic-retinopathy-detection' --path .
 ## References
 
 1. [What is Diabetic Retinopathy?](http://www.mayoclinic.org/diseases-conditions/diabetic-retinopathy/basics/definition/con-20023311)
