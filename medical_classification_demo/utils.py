@@ -3,6 +3,7 @@ DOCSTRING
 """
 import matplotlib.pyplot
 import numpy
+import os
 import pandas
 import PIL
 import seaborn
@@ -118,7 +119,7 @@ class ImageToArray:
         """
         return numpy.save(arr_name, arr_object)
 
-class Preprocess_images:
+class PreprocessImages:
     """
     DOCSTRING
     """
@@ -148,6 +149,16 @@ class Preprocess_images:
         lst_imgs = [l for l in df['image']]
         return [1 if numpy.mean(numpy.array(
             PIL.Image.open(file_path + img))) == 0 else 0 for img in lst_imgs]
+    
+    def rename_images(self, src_dir, new_prefix):
+        """
+        DOCSTRING
+        """
+        for file_name in os.listdir(src_dir):
+            os.rename(
+                os.path.join(src_dir, file_name),
+                os.path.join(src_dir, new_prefix + file_name))
+            print(file_name + ' -> ' + new_prefix + file_name)
 
 class ReconcileLabels:
     """
@@ -247,7 +258,7 @@ class RotateImages:
     """
     DOCSTRING
     """
-    import cv2
+    #import cv2
 
     def __call__(self):
         start_time = time.time()
@@ -312,3 +323,7 @@ class RotateImages:
             img = self.cv2.flip(img, 1)
             self.cv2.imwrite(file_path + str(l) + '_mir' + '.jpeg', img)
         return
+
+if __name__ == '__main__':
+    preprocess_images = PreprocessImages()
+    preprocess_images.rename_images('images/readme', 'readme-')
