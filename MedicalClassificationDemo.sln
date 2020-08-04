@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "medical_classification_demo", "medical_classification_demo\medical_classification_demo.pyproj", "{E4CBD875-6205-4335-AE43-72D01DCDB8BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4CBD875-6205-4335-AE43-72D01DCDB8BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4CBD875-6205-4335-AE43-72D01DCDB8BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D043CF1-08D5-4437-B000-717DD2E894EA}
+	EndGlobalSection
+EndGlobal
